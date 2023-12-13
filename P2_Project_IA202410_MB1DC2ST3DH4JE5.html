@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>app</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>P2_Project_IA202410_MB1DC2ST3DH4JE5</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14579,7 +14579,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Semi-superivsed-learning">Semi-superivsed learning<a class="anchor-link" href="#Semi-superivsed-learning">&#182;</a></h3><p>Integrantes:</p>
+<h3 id="Semi-superivsed-learning">Semi-superivsed learning<a class="anchor-link" href="#Semi-superivsed-learning">&#182;</a></h3><p>Members:</p>
 <ul>
 <li>Miguel Brito</li>
 <li>Diana Cuenca</li>
@@ -14599,7 +14599,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="1.-Definici%C3%B3n-de-librer%C3%ADas-y-funciones">1. Definici&#243;n de librer&#237;as y funciones<a class="anchor-link" href="#1.-Definici%C3%B3n-de-librer%C3%ADas-y-funciones">&#182;</a></h4>
+<h4 id="1.-Libraries-and-functions">1. Libraries and functions<a class="anchor-link" href="#1.-Libraries-and-functions">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here we define the libraries and functions that will be used throughout the project.</p>
+<ul>
+<li><p>fetch_data(): Returns the data from the MNIST dataset as a Pandas dataframe.</p>
+</li>
+<li><p>select_balanced_samples(): Select balanced data samples that are either grouped based on the samples per class when the method to be applied is 'random', or where data is clustered in a data frame and later processed into centroids whose distances are calculated and saved into an indexes that are used to access a group of rows from the original data source when the method to be applied is 'kmeans'. In both cases, a filtered dataframe is returned.</p>
+</li>
+<li><p>train_and_evaluate(): Trains a model and returns the accuracy score of the model.</p>
+</li>
+<li><p>plot_digits(): The function is used to create a visual representation of a set of images by creating a Matplotlib figure with a specific size (20 units wide and 2 units tall). It then iterates through the images, displaying each one in a subplot. The images are reshaped to a 28x28 grid and displayed using a binary color map.</p>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14679,7 +14701,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="2.-Obtener-datos-y-separar-en-datos-de-entrenamiento-y-prueba">2. Obtener datos y separar en datos de entrenamiento y prueba<a class="anchor-link" href="#2.-Obtener-datos-y-separar-en-datos-de-entrenamiento-y-prueba">&#182;</a></h4>
+<h4 id="2.-Fetch-the-data-and-generate-the-train-and-test-sets">2. Fetch the data and generate the train and test sets<a class="anchor-link" href="#2.-Fetch-the-data-and-generate-the-train-and-test-sets">&#182;</a></h4><p>We are defining a division of 80% of data that is going to be used for training.</p>
+
 </div>
 </div>
 </div>
@@ -14711,7 +14734,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="3.-Definir-modelos-de-clasificaci%C3%B3n">3. Definir modelos de clasificaci&#243;n<a class="anchor-link" href="#3.-Definir-modelos-de-clasificaci%C3%B3n">&#182;</a></h4>
+<h4 id="3.-Define-the-classification-models">3. Define the classification models<a class="anchor-link" href="#3.-Define-the-classification-models">&#182;</a></h4><p>Once the training data is defined, we initialize the models together with a series of sample sizes that are going to be used for calculating which of the four multilayer perceptrons are more accurate. In this case, the values of 10, 50, 100 and 300 have been defined.</p>
+
 </div>
 </div>
 </div>
@@ -14744,7 +14768,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="4.-Entrenar-modelos-de-clasificaci%C3%B3n">4. Entrenar modelos de clasificaci&#243;n<a class="anchor-link" href="#4.-Entrenar-modelos-de-clasificaci%C3%B3n">&#182;</a></h4>
+<h4 id="4.-Train-the-classification-models">4. Train the classification models<a class="anchor-link" href="#4.-Train-the-classification-models">&#182;</a></h4><p>We iterate through the predefined sample sizes to create samples created at random and through the kmeans grouping to later be processed to be trained and evaluated. The results are saved into the results dictionary.</p>
+
 </div>
 </div>
 </div>
@@ -14782,7 +14807,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="5.-Graficar-resultados">5. Graficar resultados<a class="anchor-link" href="#5.-Graficar-resultados">&#182;</a></h4>
+<h4 id="5.-Graph-the-results">5. Graph the results<a class="anchor-link" href="#5.-Graph-the-results">&#182;</a></h4><p>Finally, we graph the results of the evaluation of the models.</p>
+
 </div>
 </div>
 </div>
